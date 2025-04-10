@@ -2,7 +2,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // If you ever use images or APIs, include those configs here.
+  // Image and Config APIs 
 };
 
 module.exports = nextConfig;
