@@ -2,7 +2,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Image and Config APIs 
+  // Image and Config APIs in
 };
 
 module.exports = nextConfig;
