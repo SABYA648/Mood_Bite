@@ -1,0 +1,90 @@
+🔥 Got it. If you’re using Replit AI to generate food UI cards with Unsplash images, here’s exactly how to instruct it, plus best practices and example prompts to make it do it right.
+
+⸻
+
+🧠 CORE STRATEGY:
+
+📸 Use public image URLs from Unsplash:
+	•	You don’t need an API key for demo use
+	•	Just use:
+
+https://source.unsplash.com/featured/?<keywords>
+
+
+	•	Example:
+
+https://source.unsplash.com/featured/?biryani
+https://source.unsplash.com/featured/?noodles
+https://source.unsplash.com/featured/?pizza
+
+
+
+⸻
+
+✅ TIPS TO MAKE REPLIT AI USE UNSPLASH RIGHT:
+
+🟢 1. Be explicit about image source
+
+“Use https://source.unsplash.com/featured/?<food-name> for demo food item images.”
+
+🟢 2. Specify dynamic generation
+
+“Each food card should use https://source.unsplash.com/featured/?<dishName> as its image URL.”
+
+🟢 3. Give examples of dish names in mock data
+
+“Example: dishName: "Paneer Tikka" → image: https://source.unsplash.com/featured/?Paneer Tikka”
+
+🟢 4. Limit aspect ratio
+
+Replit sometimes messes up layouts. Add this:
+
+<img
+  src={`https://source.unsplash.com/featured/?${encodeURIComponent(dishName)}`}
+  alt={dishName}
+  className="object-cover w-full h-[200px] rounded-xl"
+/>
+
+
+
+⸻
+
+✍️ EXAMPLE PROMPT SNIPPET FOR REPLIT:
+
+Include the following inside your Replit prompt to make sure image logic works:
+
+For each food item card:
+- Show an image using: `https://source.unsplash.com/featured/?<dishName>`
+- Keep the aspect ratio square or 4:3
+- Example item:
+  {
+    dishName: "Sushi Platter",
+    restaurant: "Tokyo Table",
+    image: "https://source.unsplash.com/featured/?Sushi"
+  }
+
+
+
+⸻
+
+🔥 BONUS TIP:
+
+To make it visually diverse, add keywords like:
+
+https://source.unsplash.com/featured/?indian,food,plate
+https://source.unsplash.com/featured/?burger,cheese
+
+
+
+⸻
+
+❌ Avoid:
+	•	Empty image src
+	•	Placeholder.com (looks fake)
+	•	Importing images locally (Replit hates bundling assets by default)
+
+⸻
+
+If you want, I can auto-generate 20 mock entries with proper dish names + Unsplash URLs to paste directly into your mock DB file.
+
+Want that?
