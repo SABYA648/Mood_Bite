@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sabyasachi Mishra – Product Manager Resume focused on Generative AI, B2B SaaS, and building products.">
+  <meta name="keywords" content="Product Manager, Generative AI, B2B SaaS, Resume, Sabyasachi Mishra">
+  <title>Sabyasachi Mishra – Resume (A4 Optimized)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Basic styling for body, font, and background */
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #334155; }
+    /* Container for the resume content - Wider, less top padding */
+    .page-container {
+      background: #fff; max-width: 10in; /* Increased width for screen */
+      margin: 0.5rem auto 2rem auto; /* Reduced top margin, centered */
+      padding: 0.5rem 2rem 2rem 2rem; /* Reduced top padding */
+      box-shadow: 0 10px 15px rgba(0,0,0,0.07); /* Subtle shadow */
+      border: 1px solid #e5e7eb; border-radius: .375rem; /* Light border and rounded corners */
+    }
+    /* Styling for section titles - Slightly smaller, less margin */
+    .section-title {
+      font-size: 1rem; font-weight: 600; color: #1f2937; /* Darker text, bold */
+      border-bottom: 1px solid #e5e7eb; padding-bottom: .25rem; margin-bottom: 1rem; /* Thinner underline, less space */
+    }
+    /* Styling for project cards - Tighter padding */
+    .card {
+      border: 1px solid #e5e7eb; border-radius: .5rem; /* Border and rounded corners */
+      padding: 0.75rem; /* Reduced padding */
+      display: flex; flex-direction: column; /* Flex layout */
+      transition: all .2s ease; /* Smooth transition on hover */
+      height: 100%; /* Make cards in a row equal height */
+    }
+    /* Hover effect for cards */
+    .card:hover {
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Lift effect */
+      transform: translateY(-2px);
+    }
+    /* Styling for card titles */
+    .card-title { font-weight: 600; margin-bottom: .25rem; color: #111827; /* Less margin */ }
+    /* Styling for images within cards */
+    .card-content img { width: 100%; height: 60px; object-fit: cover; border-radius: .25rem; margin-bottom: .5rem; /* Fixed height, cover */ }
+    /* Styling for skill/technology badges */
+    .badge {
+      display: inline-block; font-size: .65rem; font-weight: 500; /* Slightly smaller font */
+      padding: .15rem .5rem; margin: 0 .3rem .3rem 0; /* Tighter spacing */
+      background: #E0F2FE; color: #0284C7; border: 1px solid #7DD3FC; /* Light blue theme */
+      text-transform: uppercase; letter-spacing: .025em; border-radius: 9999px; /* Pill shape */
+    }
+    /* Styling for demo links */
+    .demo-link {
+      display: inline-flex; align-items: center; color: #2563eb; /* Blue link color */
+      font-weight: 500; font-size: .8rem; text-decoration: none; /* Slightly smaller font */
+      margin-top: auto; /* Pushes link to bottom in flex container */
+    }
+    /* Styling for icons within demo links */
+    .demo-link svg { margin-right: .2rem; width: 0.9rem; height: 0.9rem; } /* Slightly smaller icon/margin */
+    /* Styling for experience blocks - Tighter spacing */
+    .experience-block {
+      margin-bottom: 0.75rem; padding-bottom: 0.5rem; /* Reduced margins */
+      border-bottom: 1px dashed #e5e7eb; /* Dashed separator */
+    }
+    .experience-block:last-of-type { /* Remove border from last block in a section */
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    /* Header within an experience block (Company name and dates) */
+    .experience-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: .1rem; /* Reduced margin */
+    }
+    /* Company name styling - Slightly smaller */
+    .experience-header h3 { color: #1f2937; font-size: 1rem; font-weight: 600; }
+    /* Date styling */
+    .experience-header span { color: #6b7280; font-size: .8rem; font-weight: 500; } /* Slightly smaller */
+    /* Role/Title styling - Tighter spacing */
+    .experience-role {
+      font-style: italic; margin-bottom: .4rem; color: #4b5563; /* Reduced margin */
+      font-size: 0.9rem; /* Slightly smaller */
+    }
+    /* Styling for bullet points - Tighter spacing */
+    .bullet-point {
+      position: relative; padding-left: 1.25rem; margin-bottom: .25rem; color: #4b5563; /* Reduced padding/margin */
+      font-size: 0.875rem; /* Tailwind text-sm equivalent */
+      line-height: 1.4; /* Adjust line height for density */
+    }
+    /* Custom bullet character (ATS Friendly) */
+    .bullet-point:before {
+      content: "•"; /* Using a standard bullet for better ATS parsing */
+      position: absolute; left: .25rem; top: 1px; /* Moved left */
+      color: #3b82f6; font-weight: bold;
+      font-size: 1.1em; /* Slightly larger bullet */
+    }
+    /* Styling for header icons */
+    .header-link-icon {
+        width: 0.8rem; height: 0.8rem; /* Slightly smaller */
+        margin-right: 0.2rem; /* Tighter margin */
+        display: inline-block; /* Align with text */
+        vertical-align: text-bottom; /* Better alignment */
+    }
+    /* Styling for summary box - tighter padding */
+    .summary-box {
+        padding: 0.75rem; /* Reduced padding */
+        border-radius: .5rem; /* Match card radius */
+        border: 1px solid #e5e7eb; /* Match card border */
+        background-color: #f0f9ff; /* Lighter blue background */
+    }
+
+    /* Print adjustments - More aggressive for A4 fit */
+    @media print {
+      html, body { width: 100%; height: auto; margin: 0; padding: 0.25in; /* Minimal page padding */ background: #fff; color: #000; font-size: 9pt; /* Smaller base font for print */ line-height: 1.3; /* Tighter line height */ }
+      .page-container { box-shadow: none; border: none; margin: 0; padding: 0; max-width: 100%; width: 100%; }
+      a, .demo-link { color: #000 !important; text-decoration: none; } /* Ensure links are black */
+      .text-blue-600 { color: #000 !important; } /* Make colored text black */
+      .section-title { color: #000; border-color: #ccc; font-size: 10pt; font-weight: 600; margin-bottom: 0.5rem; padding-bottom: 0.15rem;} /* Tighter section titles */
+      .card, .experience-block { border-color: #ccc; }
+      .card { padding: 0.4rem; margin-bottom: 0.4rem; page-break-inside: avoid; } /* Very tight card padding, avoid breaking */
+      .badge { background: #eee; color: #333; border-color: #ccc; padding: .1rem .4rem; font-size: 7pt; margin: 0 0.15rem 0.15rem 0;} /* Smaller badges */
+      svg { display: none; } /* Hide most SVGs */
+      .demo-link svg, .header-link-icon { display: inline-block; width: 0.7em; height: 0.7em; margin-right: 0.15em; vertical-align: baseline;} /* Keep essential SVGs, smaller */
+      .no-print { display: none; } /* Hide elements marked with .no-print */
+      /* Force tighter margins */
+      .mb-8, .mb-6, .mb-5, .mb-4, .mb-3, .mb-2, .mb-1 { margin-bottom: 0.3rem !important; }
+      .mt-3, .mt-2, .mt-1 { margin-top: 0.2rem !important; }
+      .p-5, .p-4, .p-3, .p-2, .p-1 { padding: 0.25rem !important; }
+      .gap-x-6, .gap-x-4, .gap-x-2 { gap: 0.5rem !important; } /* Reduce gaps */
+      .gap-6, .gap-4, .gap-2 { gap: 0.5rem !important; }
+      /* Adjust heading sizes */
+      .text-3xl { font-size: 16pt; font-weight: bold; margin-bottom: 0.1rem !important; }
+      .text-lg { font-size: 11pt; font-weight: 600; margin-bottom: 0.2rem !important; }
+      .text-sm { font-size: 8pt; }
+      .text-xs { font-size: 7pt; }
+      .bullet-point { margin-bottom: 0.15rem; padding-left: 0.8rem; font-size: 8.5pt; } /* Tighter bullets */
+      .bullet-point:before { left: 0.1rem; font-size: 1em; top: 0; color: #000 !important; } /* Standard bullet for print */
+      .experience-block { margin-bottom: 0.4rem; padding-bottom: 0.2rem; page-break-inside: avoid;} /* Tighter experience blocks */
+       .experience-header h3 { font-size: 10pt; }
+       .experience-header span { font-size: 8pt; }
+       .experience-role { font-size: 9pt; margin-bottom: 0.2rem; }
+      img { display: none; } /* Hide images by default for ATS and space */
+      .summary-box { padding: 0.4rem !important; margin-bottom: 0.5rem !important; border: 1px solid #ccc; background: #fff !important; } /* Adjust summary box for print */
+      .page-break-before { page-break-before: always; } /* Utility class if manual break needed */
+      .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } /* Ensure grid works in print */
+    }
+    /* Screen-specific styles (can be empty if not needed) */
+    @media screen {
+      /* Example: Ensure images show on screen */
+       img { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <header class="text-center mb-4">
+        <h1 class="text-3xl font-bold mb-1">Sabyasachi Mishra</h1>
+        <p class="text-lg text-blue-600 mb-3 font-medium">Product Manager | Generative AI × B2B SaaS × Builder Mindset</p>
+        <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 text-xs text-gray-600">
+            <!--<a href="tel:+917779884260" class="hover:text-blue-600 inline-flex items-center">
+                <svg class="header-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5h-1.528a1.5 1.5 0 01-1.465-1.175l-.716-3.223a1.5 1.5 0 00-1.767-1.052l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 01-6.254-6.254c-.163-.395.07-.833.48-.95l.933-.267a1.5 1.5 0 001.052-1.767l-.716-3.223A1.5 1.5 0 004.648 2H3.5z" clip-rule="evenodd" /></svg>
+                +91 77798-84260
+            </a>-->
+            <a href="tel:+917779884260" class="hover:text-blue-600 inline-flex items-center">
+                <svg class="header-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C6.55 22.5 1.5 17.45 1.5 10.5V4.5z" clip-rule="evenodd" />
+                </svg>
+                +91 77798-84260
+            </a>
+            <a href="mailto:product@sabyasachimishra.dev" class="hover:text-blue-600 inline-flex items-center">
+                <svg class="header-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" /><path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" /></svg>
+                product@sabyasachimishra.dev
+            </a>
+            <a href="https://sabyasachimishra.dev" target="_blank" class="hover:text-blue-600 inline-flex items-center">
+                <svg class="header-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" clip-rule="evenodd" /></svg>
+                Portfolio (sabyasachimishra.dev)
+            </a>
+            <a href="https://linkedin.com/in/sabyasachimishra007" target="_blank" class="hover:text-blue-600 inline-flex items-center">
+                <svg class="header-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014V8H10.55v1.14h.037c.346-.656 1.199-1.338 2.514-1.338 2.691 0 3.185 1.77 3.185 4.069V16.338zM5.337 7.007a1.67 1.67 0 100-3.34 1.67 1.67 0 000 3.34zM6.67 16.338H3.997V8H6.67v8.338zM18 0H2C.895 0 0 .895 0 2v16c0 1.105.895 2 2 2h16c1.105 0 2-.895 2-2V2c0-1.105-.895-2-2-2z" clip-rule="evenodd" /></svg>
+                LinkedIn
+            </a>
+            <a href="#" target="_blank" class="hover:text-blue-600 inline-flex items-center"> <svg class="header-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.336 1.909-1.295 2.747-1.026 2.747-1.026.546 1.378.201 2.397.099 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.309.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C17.135 18.166 20 14.418 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                GitHub
+            </a>
+        </div>
+    </header>
+
+    <section class="mb-4">
+        <h2 class="section-title">Professional Summary</h2>
+        <div class="summary-box"> <p class="mb-2 text-sm">
+                Product Manager with a builder’s bias and hands-on experience in Generative AI. Proven ability to ship impactful AI tools from 0→1, slashing decision time by over 50% and boosting sprint velocity by 40%. Expert at owning product roadmaps, leading cross-functional squads (5+ members), and delivering features via bi-weekly agile releases in B2B SaaS environments.
+            </p>
+            <a href="#" class="demo-link no-print"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"/></svg>
+                Watch 2-min Loom Walkthrough
+            </a>
+        </div>
+    </section>
+
+    <section class="mb-4">
+        <h2 class="section-title">Built Generative AI Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="card">
+                <div class="card-content flex-grow"> <img src="https://placehold.co/120x60/E0F2FE/0284C7?text=MoodBite" alt="MoodBite thumbnail" onerror="this.onerror=null;this.src='https://placehold.co/120x60/cccccc/333333?text=Image+Error'; this.style.objectFit='contain';">
+                    <h3 class="card-title">MoodBite</h3>
+                    <p class="text-xs text-gray-600 mb-2">
+                        Voice-first food concierge (GPT-4 & Web Speech API) achieving 37% trial-to-checkout conversion.
+                    </p>
+                    <div>
+                        <span class="badge">Next.js</span><span class="badge">Tailwind</span><span class="badge">OpenAI API</span><span class="badge">Web Speech API</span>
+                    </div>
+                </div>
+                <div class="card-footer mt-2">
+                    <a href="#" class="demo-link"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5M13.5 6V4.875c0-.621.504-1.125 1.125-1.125H19.5M13.5 6L19.5 10.5" /></svg> Live Demo
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content flex-grow"> <img src="https://placehold.co/120x60/E0F2FE/0284C7?text=FeatureFit" alt="FeatureFit thumbnail" onerror="this.onerror=null;this.src='https://placehold.co/120x60/cccccc/333333?text=Image+Error'; this.style.objectFit='contain';">
+                    <h3 class="card-title">FeatureFit</h3>
+                    <p class="text-xs text-gray-600 mb-2">
+                        AI-driven feature prioritization tool that cut sprint planning time by 40%.
+                    </p>
+                    <div>
+                        <span class="badge">Streamlit</span><span class="badge">Python</span><span class="badge">OpenAI API</span><span class="badge">NLP</span>
+                    </div>
+                </div>
+                <div class="card-footer mt-2">
+                    <a href="#" class="demo-link"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5M13.5 6V4.875c0-.621.504-1.125 1.125-1.125H19.5M13.5 6L19.5 10.5" /></svg> Live Demo
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content flex-grow"> <img src="https://placehold.co/120x60/E0F2FE/0284C7?text=LLM+Tuner" alt="LLM Tuner thumbnail" onerror="this.onerror=null;this.src='https://placehold.co/120x60/cccccc/333333?text=Image+Error'; this.style.objectFit='contain';">
+                    <h3 class="card-title">LLM Tuner</h3>
+                    <p class="text-xs text-gray-600 mb-2">
+                        Interactive prompt engineering sandbox that reduced trial-and-error loops by 50%.
+                    </p>
+                    <div>
+                        <span class="badge">FastAPI</span><span class="badge">Streamlit</span><span class="badge">Prompt Eng.</span><span class="badge">LLMs</span>
+                    </div>
+                </div>
+                <div class="card-footer mt-2">
+                    <a href="#" class="demo-link"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5M13.5 6V4.875c0-.621.504-1.125 1.125-1.125H19.5M13.5 6L19.5 10.5" /></svg> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-4">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-block">
+            <div class="experience-header">
+                <h3>Power Finance Corporation Ltd.</h3>
+                <span>Jun 2023 – Present</span>
+            </div>
+            <p class="experience-role">Assistant Manager – Project Analytics (Acting Product Lead)</p>
+            <div class="bullet-point">Led a cross-functional team of 5 to develop an NLP-powered risk dashboard, reducing analysis time by 60%.</div>
+            <div class="bullet-point">Owned the 0→1 product roadmap and bi-weekly sprint cycles, boosting delivery velocity by 35%.</div>
+            <div class="bullet-point">Shipped data visualization tools with Tableau & Python, speeding exec decisions by 45%.</div>
+            </div>
+
+        <div class="experience-block">
+            <div class="experience-header">
+                <h3>Brahmagupta Edu Pvt. Ltd.</h3>
+                <span>Jan 2021 – Aug 2021</span>
+            </div>
+            <p class="experience-role">Co-Founder & Product Lead</p>
+            <div class="bullet-point">Secured $150K seed funding by shipping an MVP and compelling pitch deck.</div>
+            <div class="bullet-point">Drove 10K+ student sign-ups in Q1 via data-driven UX & engagement features.</div>
+            <div class="bullet-point">Iterated on gamified dashboards, boosting engagement by 65%.</div>
+            <a href="#" target="_blank" class="text-xs text-blue-600 hover:underline mt-1 inline-block no-print">Web Archive Link</a> </div>
+
+        <div class="experience-block">
+            <div class="experience-header">
+                <h3>Pigeon Education Pvt. Ltd.</h3>
+                <span>Jan 2020 – Dec 2020</span>
+            </div>
+            <p class="experience-role">Product Associate</p>
+            <div class="bullet-point">Automated content pipelines with Python, cutting creation time by 40%.</div>
+            <div class="bullet-point">Ran A/B tests on modules, increasing completion by 35%.</div>
+            <div class="bullet-point">Managed JIRA backlog & sprints for 7-member team, doubling on-time delivery.</div>
+            </div>
+    </section>
+
+    <section class="mb-3">
+        <h2 class="section-title">Education</h2>
+        <div class="experience-block"> <div class="experience-header">
+                <h3>Indian Institute of Management Indore</h3>
+                <span>2021 – 2022</span>
+            </div>
+            <p class="education-degree italic text-gray-600 text-sm mb-1">Post Graduate Programme in Management (MBA)</p> </div>
+        <div class="experience-block"> <div class="experience-header">
+                <h3>BIT Mesra</h3>
+                <span>2016 – 2020</span>
+            </div>
+            <p class="education-degree italic text-gray-600 text-sm">B.Tech in Electronics & Communication Engineering</p>
+        </div>
+    </section>
+
+    </div>
+    
+</body>
+
+</html>
